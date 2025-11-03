@@ -1,0 +1,11 @@
+bays = [
+{ "id": "sbay", "small"}
+  {"id","mbay","medium"}
+{"id","lbay","large"}
+]
+ships = [
+{"id","sship","smallship"}
+  {"id","mship","mediumship"}
+{"id","lship","largeship"}
+]
+
