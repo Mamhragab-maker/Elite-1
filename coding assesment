@@ -1,11 +1,23 @@
 bays = [
-{ "id": "sbay", "small"}
-  {"id","mbay","medium"}
-{"id","lbay","large"}
-]
-ships = [
-{"id","sship","smallship"}
-  {"id","mship","mediumship"}
-{"id","lship","largeship"}
+    {"id": "sbay", "size": "small"},
+    {"id": "mbay", "size": "medium"},
+    {"id": "lbay", "size": "large"}
 ]
 
+ships = [
+    {"id": "sship", "type": "smallship"},
+    {"id": "mship", "type": "mediumship"},
+    {"id": "lship", "type": "largeship"}
+]
+
+matches = []  # to store the results
+
+for ship in ships:
+    for bay in bays:
+        # check if bay size matches the ship type
+        if bay["size"] in ship["type"]:
+            matches.append({"ship": ship["id"], "bay": bay["id"]})
+
+# print the matched pairs
+for match in matches:
+    print(f"{match['ship']} fits in {match['bay']}")
